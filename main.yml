@@ -1,0 +1,9 @@
+    - name: generate ganesha-ha configfile       
+        template:         
+          src: roles/gluster/templates/ganesha-ha.conf.j2         
+          dest: /run/gluster/shared_storage/nfs-ganesha/ganesha-ha.conf         
+          owner: root         
+          group: root         
+          mode: 0600         
+          backup: yes       
+        run_once: true
